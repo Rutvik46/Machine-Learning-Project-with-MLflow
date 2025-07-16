@@ -2,7 +2,7 @@ import os
 import logging
 import sys
 
-logging_str = "[%(asctimie)s : %(levelname)s: %(message)s]"
+logging_str = "[%(asctime)s : %(levelname)s: %(message)s]"
 
 log_dir = "logs"
 log_file = "running_logs.log"

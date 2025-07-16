@@ -1,6 +1,6 @@
 pandas
 numpy
-sklearn
+scikit-learn
 matplotlib
 notebook
 mlflow==2.2.2
