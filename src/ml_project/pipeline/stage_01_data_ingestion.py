@@ -1,5 +1,5 @@
 from ml_project.components.data_ingestion import DataIngestion
-from ml_project.config.configuration import ConfigrationManger
+from ml_project.config.configuration import ConfigurationManager
 from ml_project import logger
 
 STAGE_NAME = "Data Ingestion Stage"
@@ -9,7 +9,7 @@ class DataIngestionTrainingPipeline:
         pass
 
     def main(self):
-            config_manager = ConfigrationManger()
+            config_manager = ConfigurationManager()
             data_ingestion_config = config_manager.get_data_ingestion_config()
             data_ingestion = DataIngestion(config=data_ingestion_config)
             data_ingestion.download_file()

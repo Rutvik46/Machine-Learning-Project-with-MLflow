@@ -1,5 +1,5 @@
 from ml_project.components.data_transformation import DataTransformation
-from ml_project.config.configuration import ConfigrationManger
+from ml_project.config.configuration import ConfigurationManager
 from ml_project import logger
 
 STAGE_NAME = "Data Transformation Stage"
@@ -9,7 +9,7 @@ class DataTransformationTrainingPipeline:
         pass
 
     def main(self):
-            config_manager = ConfigrationManger()
+            config_manager = ConfigurationManager()
             data_transformation_config = config_manager.get_data_transformation_config()
             data_transformation = DataTransformation(config=data_transformation_config)
             data_transformation.train_test_split()

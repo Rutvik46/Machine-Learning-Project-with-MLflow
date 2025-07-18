@@ -1,5 +1,5 @@
 from ml_project.components.data_validation import DataValidation
-from ml_project.config.configuration import ConfigrationManger
+from ml_project.config.configuration import ConfigurationManager
 from ml_project import logger
 
 STAGE_NAME = "Data Validation Stage"
@@ -9,7 +9,7 @@ class DataValidationTrainingPipeline:
         pass
 
     def main(self):
-            config_manager = ConfigrationManger()
+            config_manager = ConfigurationManager()
             data_validation_config = config_manager.get_data_validation_config()
             data_validation = DataValidation(config=data_validation_config)
             data_validation.validate_all_columns()
