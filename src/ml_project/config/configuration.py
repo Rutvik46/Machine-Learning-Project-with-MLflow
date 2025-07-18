@@ -46,12 +46,12 @@ class ConfigrationManger:
         config = self.config.data_transformation
         create_directories([config.root_dir])
         
-        data_validation_config = DataTransformationConfig(
+        data_transformation_config = DataTransformationConfig(
             root_dir=Path(config.root_dir),
             data_path=Path(config.data_path) 
         )
         
-        return data_validation_config
+        return data_transformation_config
     
     
     
