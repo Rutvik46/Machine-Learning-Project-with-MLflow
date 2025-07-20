@@ -1,0 +1,15 @@
+artifact_uri: file:///A:/Machine-Learning-Project-with-MLflow/mlruns/0/d7acdc8c5f9e4717ad3b6e86533625a4/artifacts
+end_time: 1752972800070
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d7acdc8c5f9e4717ad3b6e86533625a4
+run_name: big-gull-267
+run_uuid: d7acdc8c5f9e4717ad3b6e86533625a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752972794625
+status: 4
+tags: []
+user_id: rutvi

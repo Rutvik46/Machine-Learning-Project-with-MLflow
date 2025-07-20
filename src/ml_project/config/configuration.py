@@ -1,6 +1,7 @@
 from ml_project.constants import *
 from ml_project.utils.common import read_yaml, create_directories
-from ml_project.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
+from ml_project.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig, ModelEvaluationConfig
+from ml_project.utils.common import save_json
 
 
 class ConfigurationManager:
@@ -68,6 +69,24 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        param = self.params.ElasticNet
+        schema = self.schema.TARGET_COLUMN
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_path=Path(config.test_data_path),
+            model_path=Path(config.model_path),
+            all_params=param,
+            metrics_file_path=Path(config.metrics_file_path),
+            target_column=schema.name,
+            mlflow_url="https://dagshub.com/Rutvik46/Machine-Learning-Project-with-MLflow.mlflow"
+        )
+
+        return model_evaluation_config
     
     
     
